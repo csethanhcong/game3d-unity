@@ -74,8 +74,10 @@
      <Compile Include="Assets\_CompletedAssets\Scripts\Helpers\RandomAnimationPoint.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Helpers\RandomParticlePoint.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Helpers\VolumeHandler.cs" />
+     <Compile Include="Assets\_CompletedAssets\Scripts\Items\HealthItem.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Managers\EnemyManager.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Managers\GameOverManager.cs" />
+     <Compile Include="Assets\_CompletedAssets\Scripts\Managers\ItemManager.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Managers\PauseManager.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Managers\ScoreManager.cs" />
      <Compile Include="Assets\_CompletedAssets\Scripts\Player\PlayerHealth.cs" />
