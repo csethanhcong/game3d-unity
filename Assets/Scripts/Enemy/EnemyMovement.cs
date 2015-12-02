@@ -9,20 +9,20 @@ public class EnemyMovement : MonoBehaviour
     NavMeshAgent nav;
 
 
-    void Awake ()
+    void Awake()
     {
-        player = GameObject.FindGameObjectWithTag ("Player").transform;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
         //playerHealth = player.GetComponent <PlayerHealth> ();
         //enemyHealth = GetComponent <EnemyHealth> ();
-        nav = GetComponent <NavMeshAgent> ();
+        nav = GetComponent<NavMeshAgent>();
     }
 
 
-    void Update ()
+    void Update()
     {
         //if(enemyHealth.currentHealth > 0 && playerHealth.currentHealth > 0)
         //{
-            nav.SetDestination (player.position);
+        nav.SetDestination(player.position);
         //}
         //else
         //{

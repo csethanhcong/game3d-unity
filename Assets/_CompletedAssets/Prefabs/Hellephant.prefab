@@ -80,9 +80,10 @@ GameObject:
   - 195: {fileID: 19546556}
   - 135: {fileID: 13536644}
   - 136: {fileID: 13644992}
-  - 114: {fileID: 11487314}
   - 114: {fileID: 11402556}
   - 114: {fileID: 11415352}
+  - 114: {fileID: 11487678}
+  - 114: {fileID: 11434600}
   m_Layer: 9
   m_Name: Hellephant
   m_TagString: Untagged
@@ -346,7 +347,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeBetweenAttacks: .5
   attackDamage: 30
---- !u!114 &11487314
+--- !u!114 &11434600
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 214e003756e943d4c97e31ab73d4ca9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fieldOfViewAngle: 110
+  playerInSight: 0
+  personalLastSighting: {x: 0, y: 0, z: 0}
+  playerInAttackedRange: 0
+  raycastMaxDistance: 1.20000005
+--- !u!114 &11487678
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -357,6 +374,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ea9a6ed18654d14db02bf0076cfe488, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  patrolSpeed: 2
+  chaseSpeed: 5
+  chaseWaitTime: 5
+  patrolWaitTime: 1
+  patrolWayPoints:
+  - {fileID: 474522, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  - {fileID: 484926, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  - {fileID: 410726, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  - {fileID: 434288, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
 --- !u!135 &13536644
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -367,7 +393,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 1.64999998
+  m_Radius: 6
   m_Center: {x: 0, y: 1.20000005, z: 0}
 --- !u!136 &13644992
 CapsuleCollider:
@@ -401,7 +427,9 @@ SkinnedMeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2552,7 +2580,9 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2588,7 +2618,9 @@ ParticleSystemRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_ScaleInLightmap: 1
   m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
+  m_MinimumChartSize: 4
   m_AutoUVMaxDistance: .5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
@@ -2614,8 +2646,36 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
+      propertyPath: patrolWayPoints.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: raycastMaxDistance
+      value: 1.20000005
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: patrolWayPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 474522, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: patrolWayPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 484926, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: patrolWayPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 410726, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: patrolWayPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 434288, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Radius
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
