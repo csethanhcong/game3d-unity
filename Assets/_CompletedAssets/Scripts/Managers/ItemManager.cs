@@ -9,7 +9,6 @@ namespace CompleteProject
         public float spawnItemTime = 15f;            // How long between each spawn.
         public Transform[] spawnItemPoints;         // An array of the spawn points this item can spawn from.
 
-        float increaseHealth = 50f;                 // increase 50HP 
         void Start ()
         {
             // Call the Spawn function after a delay of the spawnTime and then continue to call after the same amount of time.

@@ -2828,7 +2828,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fcc756edf9995e48b3e160c26e12012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: {fileID: 0}
+  playerHP: {fileID: 2023876516}
   item: {fileID: 100000, guid: 2ecdc6c5e0388c54c9a5e12305e60856, type: 3}
   spawnItemTime: 15
   spawnItemPoints:
