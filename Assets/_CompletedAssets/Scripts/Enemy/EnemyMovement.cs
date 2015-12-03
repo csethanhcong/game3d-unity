@@ -120,6 +120,7 @@ namespace CompleteProject
 
         void Chasing(float chaseSpeed = 0f)
         {
+            //nav.Resume();
             // Create a vector from the enemy to the last sighting of the player.
             Vector3 sightingDeltaPos = enemySight.personalLastSighting - transform.position;
 
@@ -149,6 +150,11 @@ namespace CompleteProject
             else
                 // If not near the last sighting personal sighting of the player, reset the timer.
                 chaseTimer = 0f;
+            //nav.Stop();
+            //GetComponent<Rigidbody>().isKinematic = false;
+            //GetComponent<Rigidbody>().useGravity = true;
+            //GetComponent<Rigidbody>().AddRelativeForce(new Vector3(0, 5, 0),ForceMode.Impulse);
+            
         }
 
 

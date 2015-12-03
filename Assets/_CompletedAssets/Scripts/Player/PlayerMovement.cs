@@ -34,6 +34,16 @@ namespace CompleteProject
             // Store the input axes.
             float h = CrossPlatformInputManager.GetAxisRaw("Horizontal");
             float v = CrossPlatformInputManager.GetAxisRaw("Vertical");
+            //playerRigidbody.AddRelativeTorque(Vector3.back * 50 * Time.deltaTime);
+
+            //float h = Input.GetAxis("Horizontal");
+            //float v = Input.GetAxis("Vertical");
+
+            //if (Input.GetKeyDown(KeyCode.Space))
+            //{
+            //    Debug.Log("sadas");
+            //    playerRigidbody.velocity =  (new Vector3(0, 5f, 0f));
+            //}
 
             // Move the player around the scene.
             Move (h, v);

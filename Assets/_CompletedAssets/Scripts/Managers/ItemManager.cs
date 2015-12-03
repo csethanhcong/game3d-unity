@@ -25,7 +25,7 @@ namespace CompleteProject
         void Spawn ()
         {
             // If the number of health item appeared on game is exceeded the limitation , stop spawning it
-            if (nbrOfHealthItemsOnScreen <= maxHealthItemOnScreen)
+            if (nbrOfHealthItemsOnScreen >= maxHealthItemOnScreen)
                 return;
 
             // Find a random index between zero and one less than the number of spawn points.

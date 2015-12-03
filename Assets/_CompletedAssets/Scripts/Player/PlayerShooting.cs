@@ -30,7 +30,7 @@ namespace CompleteProject
             // Set up the references.
             gunParticles = GetComponent<ParticleSystem> ();
             gunLine = GetComponent <LineRenderer> ();
-            gunAudio = GetComponent<AudioSource> ();
+            gunAudio = GetComponent<AudioSource> (); 
             gunLight = GetComponent<Light> ();
 			//faceLight = GetComponentInChildren<Light> ();
         }
@@ -73,6 +73,11 @@ namespace CompleteProject
             gunLight.enabled = false;
         }
 
+
+        public bool IsPlayerShooting()
+        {
+            return gunAudio.isPlaying;
+        }
 
         void Shoot ()
         {
