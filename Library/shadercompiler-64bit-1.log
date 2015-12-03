@@ -1,15 +1,114 @@
-Base path: D:/Unity5.2.3/Editor/Data
-Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-12528
+Base path: C:/Program Files/Unity/Editor/Data
+Pipe name: \\.\pipe\UnityShaderCompiler-64bit-1-4532
 Cmd: getPlatforms
+Cmd: preprocess
+  insize=3680 outsize=673 ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=982 outsize=4418 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _ALPHABLEND_ON pd= ok=1
+  api=4 type=0 insize=3272 outsize=1006 kw= pd= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=982 outsize=11105 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _ALPHABLEND_ON pd= ok=1
+  api=4 type=1 insize=3272 outsize=1355 kw= pd= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=977 outsize=4418 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _EMISSION _NORMALMAP _SPECGLOSSMAP pd= ok=1
+  api=4 type=0 insize=3270 outsize=1006 kw= pd= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=977 outsize=12015 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _EMISSION _NORMALMAP _SPECGLOSSMAP pd= ok=1
+  api=4 type=1 insize=3270 outsize=1225 kw= pd= ok=1
 Cmd: compileSnippet
-  api=4 type=0 insize=977 outsize=4418 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _EMISSION pd= ok=1
+  api=4 type=0 insize=3277 outsize=1006 kw= pd= ok=1
 Cmd: compileSnippet
-  api=4 type=1 insize=977 outsize=11235 kw=DIRECTIONAL SHADOWS_OFF LIGHTMAP_OFF DIRLIGHTMAP_COMBINED DYNAMICLIGHTMAP_ON _EMISSION pd= ok=1
+  api=4 type=1 insize=3277 outsize=2801 kw= pd= ok=1
+Cmd: preprocess
+  insize=1223 outsize=404 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1124 outsize=1006 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1124 outsize=1973 kw= pd= ok=1
+Cmd: preprocess
+  error: 2 plat 18 at (40): Can't find include file frag_ao.cginc
+  error: 2 plat 18 at (44): Can't find include file frag_ao.cginc
+  error: 2 plat 18 at (48): Can't find include file frag_ao.cginc
+  error: 2 plat 18 at (52): Can't find include file frag_ao.cginc
+  error: 2 plat 18 at (57): Can't find include file frag_ao.cginc
+  insize=6790 outsize=827 ok=0
+Cmd: preprocess
+  insize=1262 outsize=322 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1245 outsize=1314 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1245 outsize=1444 kw= pd= ok=1
+Cmd: preprocess
+  insize=2328 outsize=648 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1986 outsize=1444 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1986 outsize=3224 kw= pd= ok=1
+Cmd: preprocess
+  insize=6423 outsize=1035 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5604 outsize=1314 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5604 outsize=892 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5612 outsize=1599 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5612 outsize=1534 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5616 outsize=1412 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5616 outsize=1534 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5617 outsize=1412 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5617 outsize=1534 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5621 outsize=1769 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5621 outsize=1802 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5622 outsize=1769 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5622 outsize=1802 kw= pd= ok=1
+Cmd: preprocess
+  insize=6723 outsize=952 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5805 outsize=1314 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5805 outsize=811 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5804 outsize=1314 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5804 outsize=908 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5798 outsize=1314 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5798 outsize=2639 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5797 outsize=1314 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5797 outsize=2793 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5800 outsize=1314 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5800 outsize=2907 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5799 outsize=1314 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5799 outsize=2964 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=5801 outsize=1314 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=5801 outsize=1014 kw= pd= ok=1
+Cmd: preprocess
+  insize=851 outsize=294 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=862 outsize=1006 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=862 outsize=1103 kw= pd= ok=1
+Cmd: preprocess
+  insize=1331 outsize=291 ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=1345 outsize=1574 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=1345 outsize=1956 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=0 insize=530 outsize=2224 kw= pd= ok=1
+Cmd: compileSnippet
+  api=4 type=1 insize=530 outsize=1899 kw= pd= ok=1
