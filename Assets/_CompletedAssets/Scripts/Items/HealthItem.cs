@@ -25,6 +25,8 @@ namespace CompleteProject
             {
                 playerHealth.RecoverHp(HpRegenAmount);
 
+                Debug.Log(playerHealth.currentHealth);
+
                 // Destroy health item
                 Destroy(gameObject);
             }
