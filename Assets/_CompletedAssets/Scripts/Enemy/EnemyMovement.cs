@@ -14,6 +14,8 @@ namespace CompleteProject
         public float chaseSpeed = 5f;                           // The nav mesh agent's speed when chasing.
         public float chaseWaitTime = 5f;                        // The amount of time to wait when the last sighting is reached.
         public float patrolWaitTime = 1f;                       // The amount of time to wait when the patrol way point is reached.
+        public float bossRegenWaitTime = 5f;                    // The amount of time to wait when HP of boss regen
+        public int bossRegenAmount = 10;                        // The amount of HP the boss gained after a timer tick event occurs
         public Transform[] patrolWayPoints;                     // An array of transforms for the patrol route.
 
 
@@ -24,7 +26,9 @@ namespace CompleteProject
         private LastPlayerSighting lastPlayerSighting;          // Reference to the last global sighting of the player.
         private float chaseTimer;                               // A timer for the chaseWaitTime.
         private float patrolTimer;                              // A timer for the patrolWaitTime.
+        private float bossRegenTimer;                           // A timer to control boss regen HP 
         private int wayPointIndex;                              // A counter for the way point array.
+        private bool onHpRegen;                                 // A flag to indicate whether boss is regen HP or not
 
 
         void Awake()
@@ -37,6 +41,7 @@ namespace CompleteProject
             enemyHealth = GetComponent<EnemyHealth>();
             lastPlayerSighting = GameObject.FindGameObjectWithTag("GameController").GetComponent<LastPlayerSighting>();
             wayPointIndex = 0;
+            onHpRegen = false;
         }
 
 
@@ -51,7 +56,10 @@ namespace CompleteProject
 
                 //// If the player has been sighted and isn't dead...
                 //else 
-                if (enemySight.personalLastSighting != lastPlayerSighting.resetPosition && playerHealth.currentHealth > 0f)
+                if (gameObject.tag == "Boss" && (enemyHealth.currentHealth <= 0.4 * enemyHealth.startingHealth || onHpRegen))
+                    RunAway();
+                else
+                    if (enemySight.personalLastSighting != lastPlayerSighting.resetPosition && playerHealth.currentHealth > 0f)
                     // ... chase.
                     Chasing();
 
@@ -63,6 +71,45 @@ namespace CompleteProject
             else nav.enabled = false;
         }
 
+        // Boss ran away from player when their HP is approximate 40% or lower and they will recover HP over the time
+        void RunAway()
+        {
+            // ... increment the timer.
+            bossRegenTimer += Time.deltaTime;
+
+
+            // Regen now .. 
+            onHpRegen = true;
+            if (bossRegenTimer > bossRegenWaitTime)
+            {
+                // Hp is not full
+                if (enemyHealth.currentHealth + bossRegenAmount <= enemyHealth.startingHealth)
+                {
+                    enemyHealth.currentHealth += bossRegenAmount;
+                    onHpRegen = true;
+                }
+                // Hp is full and boss returned to patrol and chase player
+                else
+                {
+                    enemyHealth.currentHealth = enemyHealth.startingHealth;
+                    onHpRegen = false;
+                }
+
+                bossRegenTimer = 0;
+            }
+
+            // run away and pretend not seeing player at all
+            if ( onHpRegen)
+            {
+                enemySight.playerInSight = false;
+                enemySight.playerInAttackedRange = false;
+                nav.destination = lastPlayerSighting.resetPosition;
+
+                // patrolling with chase speed depend on current enemy's health. Hp is lower, patrolSpeed is higher
+                Patrolling(chaseSpeed*enemyHealth.startingHealth/(enemyHealth.currentHealth + 100 - enemyHealth.currentHealth% 100));
+            }
+            
+        }
 
         void Shooting()
         {
@@ -71,7 +118,7 @@ namespace CompleteProject
         }
 
 
-        void Chasing()
+        void Chasing(float chaseSpeed = 0f)
         {
             // Create a vector from the enemy to the last sighting of the player.
             Vector3 sightingDeltaPos = enemySight.personalLastSighting - transform.position;
@@ -82,8 +129,8 @@ namespace CompleteProject
                 nav.destination = enemySight.personalLastSighting;
 
             // Set the appropriate speed for the NavMeshAgent.
-            nav.speed = chaseSpeed;
-
+            nav.speed = chaseSpeed == 0f ? this.chaseSpeed : chaseSpeed;
+             
             // If near the last personal sighting...
             if (nav.remainingDistance < nav.stoppingDistance)
             {
@@ -105,10 +152,10 @@ namespace CompleteProject
         }
 
 
-        void Patrolling()
+        void Patrolling(float patrolSpeed = 0)
         {
             // Set an appropriate speed for the NavMeshAgent.
-            nav.speed = patrolSpeed;
+            nav.speed = patrolSpeed == 0f ? this.patrolSpeed : patrolSpeed;
 
             // If near the next waypoint or there is no destination...
             if (nav.destination == lastPlayerSighting.resetPosition || nav.remainingDistance < nav.stoppingDistance)

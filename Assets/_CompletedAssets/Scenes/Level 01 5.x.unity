@@ -117,7 +117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
   enemy: {fileID: 153412, guid: 548c56f4bcf4db24b8aa057e9846a005, type: 2}
-  spawnTime: 15
+  spawnTime: 20
   spawnPoints:
   - {fileID: 933997770}
 --- !u!114 &14871710
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
   enemy: {fileID: 100000, guid: ea3c2728ef33e3a4d99527a86cda6465, type: 2}
-  spawnTime: 3
+  spawnTime: 5
   spawnPoints:
   - {fileID: 1725468539}
 --- !u!114 &14871711
@@ -149,7 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 2023876516}
   enemy: {fileID: 100002, guid: e5171f72421770240bd7c3989fe351e3, type: 2}
-  spawnTime: 3
+  spawnTime: 5
   spawnPoints:
   - {fileID: 345275349}
 --- !u!4 &14871712
@@ -721,6 +721,10 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 269909661}
+--- !u!4 &280103231 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 499118, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  m_PrefabInternal: {fileID: 1335918678}
 --- !u!1 &284379003
 GameObject:
   m_ObjectHideFlags: 0
@@ -955,6 +959,10 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: .5}
   m_EffectDistance: {x: 2, y: -2}
   m_UseGraphicAlpha: 1
+--- !u!4 &394038872 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 495198, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  m_PrefabInternal: {fileID: 1335918678}
 --- !u!1 &435515921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1155,6 +1163,10 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 75, y: 60}
   m_Pivot: {x: 0, y: 0}
+--- !u!4 &514635954 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 410726, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  m_PrefabInternal: {fileID: 1335918678}
 --- !u!1 &545451770
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,6 +1318,10 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 1
+--- !u!4 &575240314 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 434288, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  m_PrefabInternal: {fileID: 1335918678}
 --- !u!1 &636207312
 GameObject:
   m_ObjectHideFlags: 0
@@ -2158,6 +2174,10 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 130, y: 50}
   m_Pivot: {x: .5, y: .5}
+--- !u!4 &1128956873 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 495520, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  m_PrefabInternal: {fileID: 1335918678}
 --- !u!1 &1139190131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2828,11 +2848,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fcc756edf9995e48b3e160c26e12012, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHP: {fileID: 0}
-  item: {fileID: 100000, guid: 2ecdc6c5e0388c54c9a5e12305e60856, type: 3}
+  playerHP: {fileID: 2023876516}
+  item: {fileID: 115498, guid: 7182662a9f5ea9d4b98edeff04f50d3c, type: 2}
   spawnItemTime: 15
+  maxHealthItemOnScreen: 5
   spawnItemPoints:
-  - {fileID: 1984428398}
+  - {fileID: 1976004123}
+  - {fileID: 1543343103}
+  - {fileID: 514635954}
+  - {fileID: 575240314}
+  - {fileID: 280103231}
+  - {fileID: 1128956873}
+  - {fileID: 1590628581}
+  - {fileID: 394038872}
+  - {fileID: 1477804847}
 --- !u!4 &1470419839
 Transform:
   m_ObjectHideFlags: 0
@@ -2840,11 +2869,23 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1470419837}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.83647966, y: 1.36088181, z: -4.22216606}
+  m_LocalPosition: {x: 12.9154797, y: 1.36088181, z: 2.59136391}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!4 &1477804847 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 430368, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  m_PrefabInternal: {fileID: 1335918678}
+--- !u!4 &1543343103 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 484926, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  m_PrefabInternal: {fileID: 1335918678}
+--- !u!4 &1590628581 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 448956, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  m_PrefabInternal: {fileID: 1335918678}
 --- !u!1 &1591794898
 GameObject:
   m_ObjectHideFlags: 0
@@ -2925,6 +2966,10 @@ Prefab:
     - target: {fileID: 10800002, guid: 4e5a0d387dc27394b81600988ad0216f, type: 2}
       propertyPath: m_BounceIntensity
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400004, guid: 4e5a0d387dc27394b81600988ad0216f, type: 2}
+      propertyPath: currentHealth
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4e5a0d387dc27394b81600988ad0216f, type: 2}
@@ -3775,6 +3820,10 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 16
+--- !u!4 &1976004123 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 474522, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  m_PrefabInternal: {fileID: 1335918678}
 --- !u!1 &1979757893
 GameObject:
   m_ObjectHideFlags: 0
@@ -3859,7 +3908,7 @@ GameObject:
   m_Layer: 0
   m_Name: HeartSpawnPoint
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -3870,7 +3919,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1984428397}
   m_LocalRotation: {x: 0, y: .258819073, z: 0, w: .965925872}
-  m_LocalPosition: {x: 10, y: 0, z: 0}
+  m_LocalPosition: {x: 10, y: -1.23000002, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

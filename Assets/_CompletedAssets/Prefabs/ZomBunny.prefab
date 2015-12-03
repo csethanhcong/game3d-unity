@@ -37,7 +37,7 @@ GameObject:
   - 114: {fileID: 11462928}
   m_Layer: 9
   m_Name: ZomBunny
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -306,11 +306,13 @@ MonoBehaviour:
   chaseSpeed: 5
   chaseWaitTime: 5
   patrolWaitTime: 1
+  bossRegenWaitTime: 5
+  bossRegenAmount: 10
   patrolWayPoints:
-  - {fileID: 474522, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
-  - {fileID: 484926, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
-  - {fileID: 410726, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
-  - {fileID: 434288, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  - {fileID: 499118, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  - {fileID: 495520, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  - {fileID: 448956, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+  - {fileID: 495198, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2644,22 +2646,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: patrolWayPoints.Array.data[0]
       value: 
-      objectReference: {fileID: 474522, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+      objectReference: {fileID: 499118, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
     - target: {fileID: 0}
       propertyPath: patrolWayPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 484926, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+      objectReference: {fileID: 495520, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
     - target: {fileID: 0}
       propertyPath: patrolWayPoints.Array.data[2]
       value: 
-      objectReference: {fileID: 410726, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+      objectReference: {fileID: 448956, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
     - target: {fileID: 0}
       propertyPath: patrolWayPoints.Array.data[3]
       value: 
-      objectReference: {fileID: 434288, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
+      objectReference: {fileID: 495198, guid: 4b3ff1dafb4365a4ca302087aef35b9d, type: 2}
     - target: {fileID: 0}
       propertyPath: raycastMaxDistance
       value: .800000012
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

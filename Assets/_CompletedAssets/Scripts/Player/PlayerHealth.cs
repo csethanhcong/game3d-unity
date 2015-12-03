@@ -56,6 +56,23 @@ namespace CompleteProject
         }
 
 
+        /// <summary>
+        /// When player picks up a health item in the ground , it will recover an amount of HP for them
+        /// </summary>
+        /// <param name="amount"></param>
+        public void RecoverHp(int amount)
+        {
+            // Increase the current health by the HP recover amount.
+            currentHealth += amount;
+
+            // Don't exceed the maximum health
+            if (currentHealth > startingHealth)
+                currentHealth = startingHealth;
+
+            // Set the health bar's value to the current health.
+            healthSlider.value = currentHealth;
+        }
+
         public void TakeDamage (int amount)
         {
             // Set the damaged flag so the screen will flash.
