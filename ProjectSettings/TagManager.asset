@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Boss
   - HealthItem
+  - WayPoints
+  - Environment
   layers:
   - Default
   - TransparentFX
@@ -20,7 +22,7 @@ TagManager:
   - Shootable
   - LightMask
   - Invisible
-  - 
+  - Enemy
   - 
   - 
   - 

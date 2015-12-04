@@ -24,9 +24,12 @@ namespace CompleteProject{
 		void Update () {
 			if (ScoreManager.score >= nextLvlScore) {
 				level++;
-				//TODO: Play sound Player Level Up, don't know how
+                //TODO: Play sound Player Level Up, don't know how
 
-				LevelManager.level = level;
+                GetComponent<PlayerHealth>().currentHealth = GetComponent<PlayerHealth>().startingHealth;
+               // GetComponentInChildren<PlayerShooting>().damagePerShot += 2;
+
+                LevelManager.level = level;
 				//ScoreManager.score = level;
 				lastLvlScore = nextLvlScore;
 				nextLvlScore += level * LevelManager.BASE_SCORE;
