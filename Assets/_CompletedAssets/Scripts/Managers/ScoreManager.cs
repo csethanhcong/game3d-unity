@@ -7,6 +7,9 @@ namespace CompleteProject
     public class ScoreManager : MonoBehaviour
     {
         public static int score;        // The player's score.
+		public static int level;
+
+		private static int nextCheckpoint;
 
 
         Text text;                      // Reference to the Text component.
@@ -19,11 +22,13 @@ namespace CompleteProject
 
             // Reset the score.
             score = 0;
+			nextCheckpoint = 100;
         }
 
 
         void Update ()
         {
+
             // Set the displayed text to be the word "Score" followed by the score value.
             text.text = "Score: " + score;
         }

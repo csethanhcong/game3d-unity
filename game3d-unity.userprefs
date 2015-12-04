@@ -1,0 +1,22 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\_CompletedAssets\Scripts\Player\PlayerLevel.cs">
+    <Files>
+      <File FileName="game3d-unity.sln" Line="1" Column="1" />
+      <File FileName="Assets\_CompletedAssets\Scripts\Player\PlayerLevel.cs" Line="7" Column="19" />
+      <File FileName="Assets\_CompletedAssets\Scripts\Managers\LevelManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\_CompletedAssets\Scripts\Player\PlayerHealth.cs" Line="32" Column="24" />
+      <File FileName="Assets\_CompletedAssets\Scripts\Managers\ScoreManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\_CompletedAssets\Scripts\Enemy\EnemyHealth.cs" Line="1" Column="1" />
+      <File FileName="Assets\_CompletedAssets\Scripts\Player\PlayerExperience.cs" Line="1" Column="1" />
+      <File FileName="Assets\_CompletedAssets\Scripts\Player\PlayerMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\_CompletedAssets\Scripts\Player\PlayerShooting.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="E:\GP-Assignment\game3d-unity\Assets\_CompletedAssets\Scripts\Player\PlayerHealth.cs" line="35" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
